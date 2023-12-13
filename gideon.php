@@ -4,6 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Excel Data Analysis</title>
+
+    <style>
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+        flex-direction: column; /* Updated to column layout */
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    .result-container {
+        margin: 20px;
+    }
+
+    table {
+        width: 80%;
+        border-collapse: collapse;
+        margin: 20px auto;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+        padding: 10px;
+        border: 1px solid #ddd;
+        text-align: center;
+    }
+
+    th {
+        background-color: #4CAF50;
+        color: white;
+    }
+</style>
+
 </head>
 <body>
 
@@ -136,6 +177,18 @@ function calculateRange($data) {
 }
 
 ?>
+<div class="result-container">
+    <?php
+    // Display results for rainfall
+    displayResults("Rainfall", $rainfallResults);
+    ?>
+</div>
 
+<div class="result-container">
+    <?php
+    // Display results for evaporation
+    displayResults("Evaporation", $evaporationResults);
+    ?>
+</div>
 </body>
 </html>
